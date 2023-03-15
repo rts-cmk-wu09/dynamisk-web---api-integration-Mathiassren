@@ -8,19 +8,22 @@ h1 {
   color: rgb(225, 236, 22);
   text-align: center;
 }
+
 ul {
   color: white;
-  cursor: pointer;
-  flex-wrap: wrap;
-  width: 450px;
-  max-width: 1080px;
+}
+
+section {
+  width: 400px;
   margin: auto;
+  margin-bottom: 50px;
+  border: 2px solid white;
 }
 
 li {
-  border: 1px solid white;
-  list-style: none;
-  color: white;
+  box-shadow: -1px 21px 149px -59px rgb(255, 255, 255) inset;
+  -webkit-box-shadow: -1px 21px 149px -59px rgb(255, 255, 255) inset;
+  -moz-box-shadow: -1px 21px 149px -59px rgb(255, 255, 255) inset;
 }
 
 .width {
@@ -28,13 +31,40 @@ li {
   margin: auto;
 }
 
-img {
-  width: 600px;
-  height: 300px;
+.pokemon-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.logo {
   margin-left: 250px;
+  width: 550px;
+  height: 300px;
 }
 
 #width {
   max-width: 1080px;
   margin: auto;
+}
+
+.front-sprite {
+  width: 150px;
+  margin-left: 50px;
+}
+
+.back-sprite {
+  width: 150px;
+}
+
+h3 {
+  text-align: center;
+  padding-top: 50px;
+  font-variant: small-caps;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  letter-spacing: 5px;
+}
+
+/*abilities*/
+.abilities {
+  background-color: black;
 }
