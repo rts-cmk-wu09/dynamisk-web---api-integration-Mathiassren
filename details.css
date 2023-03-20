@@ -1,0 +1,33 @@
+button {
+  color: rgb(0, 0, 0);
+  background-color: white;
+}
+
+h2 {
+  color: white;
+  text-align: center;
+}
+.ability li {
+  color: white;
+  background-color: red;
+  max-width: 1080px;
+  margin: auto;
+  list-style: none;
+  height: 100px;
+  width: 250px;
+  text-align: center;
+}
+
+ul {
+  color: white;
+}
+
+figure {
+  text-align: center;
+}
+
+#return-btn {
+  background-color: red;
+  max-width: 1080px;
+  margin: auto;
+}

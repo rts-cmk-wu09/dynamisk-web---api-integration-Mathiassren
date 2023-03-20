@@ -1,39 +1,8 @@
 * {
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-h1 {
-  color: rgb(225, 236, 22);
-  text-align: center;
-}
-
-ul {
-  color: white;
-}
-
-section {
-  width: 400px;
-  margin: auto;
-  margin-bottom: 50px;
-  border: 2px solid white;
-}
-
-li {
-  box-shadow: -1px 21px 149px -59px rgb(255, 255, 255) inset;
-  -webkit-box-shadow: -1px 21px 149px -59px rgb(255, 255, 255) inset;
-  -moz-box-shadow: -1px 21px 149px -59px rgb(255, 255, 255) inset;
-}
-
-.width {
-  max-width: 1080px;
-  margin: auto;
-}
-
-.pokemon-list {
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .logo {
@@ -42,29 +11,71 @@ li {
   height: 300px;
 }
 
+h4 {
+  color: white;
+}
+
+.hp {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+  border-radius: 24px;
+  padding: 20px;
+}
+
+.pokemonlist {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1080px;
+  margin: auto;
+}
+
+.pokemonlist {
+  max-width: 1080px;
+  margin: auto;
+}
+
 #width {
   max-width: 1080px;
   margin: auto;
 }
 
-.front-sprite {
-  width: 150px;
-  margin-left: 50px;
+i {
+  color: tomato;
 }
 
-.back-sprite {
-  width: 150px;
+div a {
+  color: white;
+  text-decoration: none;
 }
 
-h3 {
+section {
+  width: 250px;
+  height: 250px;
+  margin: 10px;
+  border-radius: 24px;
+  border: 2px solid yellow;
+}
+
+.pokemon-name {
   text-align: center;
   padding-top: 50px;
-  font-variant: small-caps;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  letter-spacing: 5px;
 }
 
-/*abilities*/
-.abilities {
-  background-color: black;
+.sprite {
+  padding-left: 80px;
+}
+
+.sprite,
+section,
+h4,
+a,
+i,
+.hp,
+.pokemon-name {
+  background-color: rgb(57, 57, 57);
+}
+
+figure a {
+  color: white;
 }
