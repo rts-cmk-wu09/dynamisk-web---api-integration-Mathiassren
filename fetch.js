@@ -1,25 +1,14 @@
-//Const variabel som selektere den "første" .pokemonlist i dommen
-
 const pokemonList = document.querySelector(".pokemonlist");
 
-//Fetch api
-//lav en funktion som konvertere mit response til json.
 fetch("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=181")
-  //Opretter et response som retunere min data som json.
-  //Data kan være hvilket som helst navn, men i dette tilfælde er det den samlede data for pokemonnerne
   .then((response) => response.json())
   .then((data) => {
     console.log(data);
-    //Opretter løkke som iterer over hvert pokemon navn.
-    //For hvert pokemon navn opretettes en unordered liste med deres navne.
+
     data.results.forEach((pokemon) => {
       fetch(pokemon.url)
         .then((response) => response.json())
         .then((data) => {
-          //Const variabel oprettes og sørger for at hente de forskellige billeder af hver pokemon
-          //Derefter bliver hvert billede tilføjet til klassen pokemonlist.
-          //Og herefter bruges der innerHTML og template literals til at manipulere dommens elementer udfra js.
-
           const spriteUrl = data.sprites.front_default;
           pokemonList.innerHTML += `
             <section> 
@@ -37,3 +26,42 @@ fetch("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=181")
         });
     });
   });
+
+//---EKSEMPEL PÅ AXIOS---//
+// import axios from "./node_modules/axios/dist/esm/axios.js";
+
+// const pokemonList = document.querySelector(".pokemonlist");
+
+// axios
+//   .get("https://pokeapi.co/api/v2/pokemon/")
+//   .then((response) => {
+//     const pokemonData = response.data.results;
+//     const pokemonListItems = pokemonData.map(async (pokemon) => {
+//       const pokemonListItem = document.createElement("div");
+//       pokemonListItem.classList.add("pokemon");
+
+//       const additionalDataResponse = await axios.get(pokemon.url);
+//       const additionalData = additionalDataResponse.data;
+
+//       pokemonListItem.innerHTML = `
+//         <h2>${additionalData.name}</h2>
+//         <img src="${additionalData.sprites.front_default}" alt="${
+//         additionalData.name
+//       }">
+//         <p>HP: ${additionalData.stats[0].base_stat}</p>
+//         <ul>
+//           ${additionalData.abilities
+//             .map((ability) => `<li>${ability.ability.name}</li>`)
+//             .join("")}
+//         </ul>
+//       `;
+
+//       return pokemonListItem;
+//     });
+//     Promise.all(pokemonListItems).then((pokemonItems) => {
+//       pokemonList.append(...pokemonItems);
+//     });
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });

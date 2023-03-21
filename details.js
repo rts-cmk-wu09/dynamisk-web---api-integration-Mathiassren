@@ -5,11 +5,6 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
   .then((response) => response.json())
   .then((pokemonData) => {
     document.querySelector("body").innerHTML += `
-    <figure>
-    <a>
-    ${pokemonData.forms[0].name}
-    </a>
-    </figure>
     `;
 
     // Fetch the abilities data for the selected Pokemon
@@ -27,6 +22,9 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
           <h2>Abilities:</h2>
           <div class="ability">
           <li>
+          <a>
+          ${pokemonData.forms[0].name}
+          </a>
             ${abilityNames.map((ability) => `<li>${ability}</li>`).join("")}
           </li>
           </div>
